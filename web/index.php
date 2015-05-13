@@ -1,4 +1,8 @@
 <?php
+
+use Symfony\Component\HttpFoundation\Request;
+use Silex\Application;
+
 /**
  * web/index.php
  *
@@ -11,9 +15,6 @@ if (php_sapi_name() === 'cli-server' && is_file($filename)) {
     return false;
 }
 
-use Symfony\Component\HttpFoundation\Request;
-use Silex\Application;
-
 require __DIR__.'/../vendor/autoload.php';
 
 // global app object, acts as a service container
@@ -22,10 +23,10 @@ $app = new Silex\Application();
 // let's store the request object
 $app['app.request'] = Request::createFromGlobals();
 
-$config_dir = __DIR__.'/../app/Config';
+$configDirectory = __DIR__.'/../app/Config';
 
-require_once $config_dir.'/parameters.php';
-require_once $config_dir.'/services.php';
-require_once $config_dir.'/routes.php';
+require_once $configDirectory.'/parameters.php';
+require_once $configDirectory.'/services.php';
+require_once $configDirectory.'/routes.php';
 
 $app->run();
