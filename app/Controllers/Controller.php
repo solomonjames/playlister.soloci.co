@@ -4,7 +4,7 @@ namespace Controllers;
 
 class Controller
 {
-    private $app;
+    protected $app;
 
     /**
      * Constructor

@@ -8,6 +8,13 @@ $app['default.controller'] = $app->share(function() use ($app) {
 });
 
 // Home page
-$app->get('/', 'default.controller:indexAction');
+$app->get('/', 'default.controller:indexAction')->bind('home');
+
+$app['auth.controller'] = $app->share(function() use ($app) {
+    return new \Controllers\AuthController($app);
+});
+
+$app->get('/auth/spotify', 'auth.controller:spotifyAction')->bind('auth.spotify');
+$app->get('/auth/callback', 'auth.controller:callbackAction')->bind('auth.callback');
 
 return $app;

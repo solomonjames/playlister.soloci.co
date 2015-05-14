@@ -4,6 +4,8 @@ namespace Controllers;
 
 class DefaultController extends Controller
 {
+    use \Session\SessionTrait;
+
     /**
      * @return string
      */
