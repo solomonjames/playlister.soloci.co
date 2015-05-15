@@ -41,7 +41,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#/repos">Home</a></li>
                 {% if app.session.has('userInfo') %}
-                <li><a href="#/repos">{{ app.session.get('userInfo')['email'] }}</a></li>
+                <li><a href="#">{{ app.session.get('userInfo')['email'] }}</a></li>
                 {% else %}
                 <li><a href="{{ app.url_generator.generate('auth.spotify') }}">Login</a></li>
                 {% endif %}
