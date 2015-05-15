@@ -2,6 +2,9 @@
 
 namespace KSolo\Spotify\WebAPI\Model;
 
-class Playlist
+/**
+ * @see https://developer.spotify.com/web-api/object-model/#playlist-object-full
+ */
+class Playlist extends PlaylistSimplified
 {
 }
