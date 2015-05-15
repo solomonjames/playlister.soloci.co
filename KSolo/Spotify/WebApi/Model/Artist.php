@@ -2,6 +2,9 @@
 
 namespace KSolo\Spotify\WebAPI\Model;
 
+/**
+ * @see https://developer.spotify.com/web-api/object-model/#artist-object-full
+ */
 class Artist
 {
     use Traits\IdTrait;
