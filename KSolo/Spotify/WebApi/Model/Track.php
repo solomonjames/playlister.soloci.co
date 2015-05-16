@@ -7,4 +7,22 @@ namespace KSolo\Spotify\WebAPI\Model;
  */
 class Track extends TrackSimplified
 {
+    use Traits\PopularityTrait;
+    use Traits\ExternalIdsTrait;
+
+    /**
+     * @var AlbumSimplified
+     */
+    private $album;
+
+    public function setAlbum(AlbumSimplified $album)
+    {
+        $this->album = $album;
+        return $this;
+    }
+
+    public function getAlbum()
+    {
+         return $this->album;
+    }
 }

@@ -7,4 +7,21 @@ namespace KSolo\Spotify\WebAPI\Model;
  */
 class Playlist extends PlaylistSimplified
 {
+    use Traits\FollowersTrait;
+
+    /**
+     * @var string
+     */
+    private $description;
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }
