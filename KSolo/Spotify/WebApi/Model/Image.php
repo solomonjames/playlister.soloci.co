@@ -1,16 +1,27 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
+
+use JMS\Serializer\Annotation\Type;
 
 /**
  * @see https://developer.spotify.com/web-api/object-model/#image-object
  */
 class Image
 {
+    /**
+     * @Type("integer")
+     */
     private $height;
 
+    /**
+     * @Type("integer")
+     */
     private $width;
 
+    /**
+     * @Type("string")
+     */
     private $url;
 
     public function setHeight($height)

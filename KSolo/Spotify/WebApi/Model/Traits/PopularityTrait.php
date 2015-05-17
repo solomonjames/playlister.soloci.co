@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait PopularityTrait
 {
+    /**
+     * @Type("integer")
+     */
     private $popularity;
 
     public function setPopularity($popularity)

@@ -3,12 +3,14 @@
     "silex/silex": "~1.2",
     "twig/twig": ">=1.8,<2.0-dev",
     "lusitanian/oauth": "dev-master",
-    "guzzlehttp/guzzle": "~5.0"
+    "guzzlehttp/guzzle": "~5.0",
+    "symfony/serializer": "~2.6",
+    "jms/serializer": "0.16.*"
   },
   "autoload": {
     "psr-0": {
       "": "./app",
-      "KSolo", "./KSolo"
+      "KSolo": ""
     }
   }
 }

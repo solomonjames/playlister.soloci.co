@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait AvailableMarketsTrait
 {
+    /**
+     * @Type("array<string>")
+     */
     private $availableMarkets = array();
 
     public function setAvailableMarkets(array $availableMarkets)

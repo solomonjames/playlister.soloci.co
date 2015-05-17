@@ -1,6 +1,8 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
+
+use JMS\Serializer\Annotation\Type;
 
 /**
  * @see https://developer.spotify.com/web-api/object-model/#album-object-full
@@ -13,10 +15,19 @@ class Album extends AlbumSimplified
     use Traits\ExternalIdsTrait;
     use Traits\PopularityTrait;
 
+    /**
+     * @Type("array<KSolo\Spotify\WebApi\Model\Copyright>")
+     */
     private $copyrights;
 
+    /**
+     * @Type("DateTime<'Y-m-d'>")
+     */
     private $releaseDate;
 
+    /**
+     * @Type("string")
+     */
     private $releaseDatePrecision;
 
     public function setCopyrights(array $copyrights)

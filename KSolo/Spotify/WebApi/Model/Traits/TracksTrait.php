@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait TracksTrait
 {
+    /**
+     * @Type("KSolo\Spotify\WebApi\Model\Paging")
+     */
     private $tracks;
 
     public function setTracks(Paging $tracks)

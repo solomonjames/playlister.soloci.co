@@ -1,14 +1,22 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
+
+use JMS\Serializer\Annotation\Type;
 
 /**
  * @see https://developer.spotify.com/web-api/object-model/#copyright-object
  */
 class Copyright
 {
+    /**
+     * @Type("string")
+     */
     private $text;
 
+    /**
+     * @Type("string")
+     */
     private $type;
 
     public function setText($text)

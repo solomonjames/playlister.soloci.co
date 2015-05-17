@@ -1,6 +1,6 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
 
 class SavedTrack
 {

@@ -1,6 +1,8 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
+
+use JMS\Serializer\Annotation\Type;
 
 /**
  * @see https://developer.spotify.com/web-api/object-model/#paging-object
@@ -9,16 +11,34 @@ class Paging
 {
     use Traits\HrefTrait;
 
+    /**
+     * @Type("array")
+     */
     private $items;
 
+    /**
+     * @Type("integer")
+     */
     private $limit;
 
+    /**
+     * @Type("string")
+     */
     private $next;
 
+    /**
+     * @Type("integer")
+     */
     private $offset;
 
+    /**
+     * @Type("string")
+     */
     private $previous;
 
+    /**
+     * @Type("integer")
+     */
     private $total;
 
     public function setItems(array $items)

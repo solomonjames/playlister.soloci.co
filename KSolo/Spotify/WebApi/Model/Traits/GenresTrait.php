@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait GenresTrait
 {
+    /**
+     * @Type("array<string>")
+     */
     private $genres = array();
 
     public function setGenres(array $genres)

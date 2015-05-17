@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait TypeTrait
 {
+    /**
+     * @Type("string")
+     */
     private $type;
 
     public function setType($type)

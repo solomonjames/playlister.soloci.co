@@ -9,6 +9,7 @@ $app['default.controller'] = $app->share(function() use ($app) {
 
 // Home page
 $app->get('/', 'default.controller:indexAction')->bind('home');
+$app->get('/playlists', 'default.controller:playlistsAction')->bind('playlists');
 
 $app['auth.controller'] = $app->share(function() use ($app) {
     return new \Controllers\AuthController($app);

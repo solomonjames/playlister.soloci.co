@@ -1,6 +1,8 @@
 <?php
 
-namespace KSolo\Spotify\WebAPI\Model;
+namespace KSolo\Spotify\WebApi\Model;
+
+use JMS\Serializer\Annotation\Type;
 
 /**
  * @see https://developer.spotify.com/web-api/object-model/#album-object-simplified
@@ -16,6 +18,9 @@ class AlbumSimplified
     use Traits\ExternalUrlsTrait;
     use Traits\UriTrait;
 
+    /**
+     * @Type("string")
+     */
     private $albumType;
 
     public function setAlbumType($albumType)

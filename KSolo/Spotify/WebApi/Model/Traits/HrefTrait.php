@@ -2,8 +2,13 @@
 
 namespace KSolo\Spotify\WebApi\Model\Traits;
 
+use JMS\Serializer\Annotation\Type;
+
 trait HrefTrait
 {
+    /**
+     * @Type("string")
+     */
     private $href;
 
     public function setHref($href)
