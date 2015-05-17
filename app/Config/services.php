@@ -29,3 +29,10 @@ $app['jms.serializer'] = function() {
         ->setDebug(true)
         ->build();
 };
+
+$app['spotify.webapi.client'] = function () use ($app) {
+    $client = new \KSolo\Spotify\WebApi\Client;
+    $client->setSerializer($app['jms.serializer']);
+
+    return $client;
+};
