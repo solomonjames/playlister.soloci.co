@@ -19,7 +19,7 @@ class DefaultController extends Controller
     public function playlistsAction()
     {
         $client = $this->app['spotify.webapi.client'];
-        $album = $client->getAlbum('5BGzOpea6At0Nd7tYtYZOP');
+        $album = $client->getRelatedArtists('55Aa2cqylxrFIXC767Z865');
 
         //var_dump($response->json());
 
